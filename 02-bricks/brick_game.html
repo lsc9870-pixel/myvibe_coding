@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>벽돌깨기 100</title>
+  <link rel="stylesheet" href="brick_game.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div><span class="eyebrow">한 칸씩, 100단계까지</span><h1>벽돌깨기 <span>100</span></h1></div>
+      <div class="status"><span>현재 단계</span><strong id="level">01 <small>/ 100</small></strong></div>
+    </header>
+    <section class="game" aria-label="벽돌깨기 게임">
+      <div class="game-top"><span><i></i> BRICK BREAKER</span><span id="effects">효과 없음</span></div>
+      <div class="board"><canvas id="canvas" width="960" height="640" aria-label="게임 화면"></canvas>
+        <div class="overlay" id="overlay"><p class="overlay-kicker" id="kicker">준비되셨나요?</p><h2 id="message">벽돌을 모두 깨보세요!</h2><p id="hint">스페이스키 또는 아래 버튼을 눌러 시작해요</p><button id="action" type="button">게임 시작 <span>→</span></button></div>
+      </div>
+      <div class="touch" id="touch"><span>↔</span> 여기를 좌우로 움직여 바를 조작하세요</div>
+    </section>
+    <footer class="footer"><div class="instructions"><b>조작 방법</b><span><kbd>←</kbd> <kbd>→</kbd> 이동</span><span><kbd>SPACE</kbd> 시작 · 다음 단계</span></div><div class="legend"><span>★ 🐰 바 확장 (확)</span><span>★ 🐱 공 추가 (공)</span><span>★ 🐻 벽돌 관통 (관)</span><span>숫자: 남은 횟수</span></div></footer>
+    <p class="notice" id="notice" aria-live="polite"></p>
+  </main>
+  <script src="brick_game.js"></script>
+</body>
+</html>
